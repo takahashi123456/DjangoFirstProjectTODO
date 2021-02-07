@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block customcss %}
+
+
+<!-- Bootstrap core CSS -->
+<link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+<link rel="stylesheet" href="{% static 'styledetail.css' %}">
+
+<title>詳細</title>
+
+{% endblock customcss %}
+
+{% block content %}
+
+<body>
+
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">TODOLIST 詳細</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="{% url 'list' %}">ホーム</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">リンク</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">無効</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="検索" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="flex-shrink-0 main">
+        <div class="container">
+            <div id="centers">
+                <div class="detail">
+                    <h1>{{ todoModels.title }} </h1>
+                    <p>中身：{{ todoModels.content }}</p>
+                    <p>登録日：{{ todoModels.now_date }}</p>
+                    <p>締め切り：{{ todoModels.dateline }}</p>
+                    <p>書いた人：{{ todoModels.author }}</p>
+                    <p>優先度：{{ todoModels.priority }}</p>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Copyright © 2021 Inazawa Keisuke inc. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+
+</body>
+{% endblock content %}

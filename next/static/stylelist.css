@@ -1,0 +1,103 @@
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+/* * {
+    border: solid 1px black;
+} */
+h1{
+    font-size: 3rem;
+    color: #212529;
+}
+p{
+    padding-left: 5%;
+    font-size: 1.3rem;
+    color: #212529;
+}
+
+
+main > .container {
+    padding: 60px 15px 0;
+    
+}
+main{
+    background-color: #f0f0f0;
+}
+.main{
+    height: 1000px;
+}
+
+#centers {
+    margin-left: 36%;
+}
+.content{
+    margin-top: 20px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+}
+.container{
+    text-align: center;
+}
+
+/* メインコンテンツ左側 */
+.news h1{
+    font-size: 2.5rem;
+}
+
+.content-left{
+    max-width: 350px;
+    border-radius: 20px;
+    background: #EEEFF3;
+    box-shadow:   5px 5px 14px #b8b9be,
+    -5px -5px 14px #ffffff;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    
+    margin-right: 4%;
+    text-align: center;
+    max-height: 400px;
+}
+.content-left img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    max-width: 314px;
+    /* max-height: 300px; */
+
+}
+.contenttext{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.content-left h1{
+    font-size: 2rem;
+    display: block;
+
+}
+.content-left p{
+    font-size:1rem;
+}
+
+.contentbutton{
+    margin: auto;
+    width: 35%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  7px 7px 14px #bebebe,
+            -7px -7px 14px #ffffff;
+    text-decoration: none;
+}
+.contentbutton:hover{
+    border-radius: 50px;
+background: #e0e0e0;
+box-shadow: inset 7px 7px 14px #bebebe,
+            inset -7px -7px 14px #ffffff;
+}
+
+
+.contentbutton a{
+    display: block;
+    font-size: 1rem;
+    text-decoration: none;
+    color:#525461 ;
+}

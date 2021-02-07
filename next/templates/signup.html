@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block customcss %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<title>ユーザー作成</title>
+{% endblock customcss %}
+
+{% block content %}
+
+<body class="text-center">
+
+    <main class="form-signin">
+        {{ error }}
+        <form method="POST"> {% csrf_token %}
+            <!-- <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+            <h1 class="h3 mb-3 fw-normal">サインインする</h1>
+            <label for="inputEmail" class="visually-hidden">Username</label>
+            <input type="text" id="inputEmail" name="username" class="form-control" placeholder="ユーザーネーム" required
+                autofocus>
+            <label for="inputPassword" class="visually-hidden">Password</label>
+            <input type="password" id="inputPassword" name="password" class="form-control" placeholder="パスワード" required>
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me"> 記憶する
+                </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">サインイン</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2017-2021</p>
+        </form>
+    </main>
+</body>
+
+{% endblock content %}
