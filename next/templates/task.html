@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block customcss %}
+<link rel="stylesheet" href="{% static 'styletask.css' %}">
+<title>TODO作成画面</title>
+{% endblock customcss %}
+
+{% block content %}
+<main id="task">
+    <h1>TODOタスク新規作成</h1>
+    <form method="POST" enctype="multipart/form-data" class="task2">{% csrf_token %}
+
+        <div>
+            <label for="title">TITLE</label>
+            <input type="text" id="title" name="title" placeholder="title" autofocus required>
+        </div>
+        <div>
+            <label for="contents">content</label>
+            <input type="text" id="contents" name="content" placeholder="詳細を書き込んでください" style="height:200px;" required>
+        </div>
+        <input type="hidden" id="author" name="author" value="{{ user.username }}">
+        <div>
+            <label for="dateline">締め切り</label>
+            <input type="date           " id="dateline" name="dateline" placeholder="日付を選んでください" min="2021-01-01"
+                max="2025-04-14" required>
+        </div>
+        <div>
+            <label for="priority">優先度</label>
+            <select name="priority" required>
+                <option value="denger">HIGH</option>
+                <option value="primary">LOW</option>
+            </select>
+        </div>
+
+        <div class="botan1">
+            <button class=" btn btn-primary" type="submit">追加</button>
+        </div>
+    </form>
+</main>
+{% endblock content %}

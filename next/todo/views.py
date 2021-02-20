@@ -4,6 +4,10 @@ from django.contrib.auth.models import User
 from django.db import IntegrityError
 from .models import todoModel
 from django.contrib.auth.decorators import login_required
+from django.utils import timezone
+from django.views.generic import CreateView
+from django.urls import reverse_lazy
+from .forms import todoForm
 
 # Create your views here.
 
@@ -46,5 +50,28 @@ def detailfunc(request,pk):
     return render(request,'detail.html',{"todoModels":todoModels})
 
 
-# def taskfunc(request):
-    
+def taskfunc(request):
+    if request.method =="POST":
+        # todo = todoModel(title=request.POST["title"]) 
+        # todo1 = todoModel(content=request.POST["content"])
+        # todo2 = todoModel(author=request.POST["author"])
+        # todo3 = todoModel(dateline=request.POST["dateline"])
+        # todo4 = todoModel(now_date=timezone.datetime.today())
+        # todo5 = todoModel(priority=request.POST["priority"])
+        obj = todoModel()
+        todo = todoForm(request.POST, instance=obj)
+        todo.save()
+
+        return redirect("list")
+        # except:
+        #     return render(request,"list.html",{"error":"このTODOは登録されています。"})
+        # todo = todoModel(text=request.POST['text'])
+        # todo.save()
+        
+    return render(request, "task.html",{})
+
+# class taskfuncCreate(CreateView):
+#     template_name = "task.html"
+#     model = todoModel
+#     fields = ("title", "content","author","priority")
+#     success_url = reverse_lazy("list")

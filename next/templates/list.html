@@ -31,7 +31,7 @@
                             <a class="nav-link" aria-current="page" href="{% url 'list' %}">ホーム</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">リンク</a>
+                            <a class="nav-link" href="{% url 'task' %}">todo新規作成</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">無効</a>
@@ -47,7 +47,9 @@
     </header>
 
     <!-- Begin page content -->
+
     <main class="flex-shrink-0">
+
         <div class="container">
             <div class="content">
                 {% for test in todo %}
@@ -66,6 +68,7 @@
                 {% endfor %}
             </div>
         </div>
+        {{ error }}
     </main>
 
     <footer class="footer mt-auto py-3 bg-light">

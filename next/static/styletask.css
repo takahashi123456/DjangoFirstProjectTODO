@@ -1,0 +1,40 @@
+h1{
+    font-size: 3rem;
+    color: #212529;
+    border-bottom: black solid  1px;
+    padding-left: 5%;
+}
+p{
+    padding-left: 5%;
+    font-size: 1.3rem;
+    color: #212529;
+}
+form{
+    margin-left: 10%;
+    width: 80%;
+    padding-bottom: 6px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  7px 7px 14px #bebebe,
+            -7px -7px 14px #ffffff;
+    text-decoration: none;
+}
+div{
+    display: flex;
+    padding-top: 3%;
+}
+
+label{
+    width: 30%;
+    text-align: center;
+}
+#content{
+    height: 30%;
+}
+input{
+    padding-right: 10%;
+    width: 50%;
+}
+.botan1{
+    padding-left: 45%;
+}
