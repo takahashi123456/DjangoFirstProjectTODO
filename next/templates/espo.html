@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'resetstyle.css' %}">
+    <link rel="stylesheet" href="{% static 'styleTOP.css' %}">
+</head>
+
+<body>
+    <header class="bigBG">
+        <ul>
+            <li><a href="#" class="headerfont"> TOP</a></li>
+            <li><a href="#" class="headerfont"> ABOUT</a></li>
+            <li><a href="#" class="headerfont">NEWS</a></li>
+            <li><a href="#"><img class="logo" src="{% static 'media/img/logo2.png' %}" alt=""></a></li>
+            <li><a href="#" class="headerfont"> MENBER </a></li>
+            <li><a href="#" class="headerfont">PARTNER</a></li>
+            <li><a href="#" class="headerfont">CONTACT</a></li>
+        </ul>
+    </header>
+    <main>
+        <h2 class="news"> NEWS </h2>
+        <div class="container">
+            <div class="triple">
+                <h2>サンプルタイトル</h2>
+                <img class="tripleimg" src="{% static 'media/img/espocont.jpeg' %}" alt="">
+                <p>サンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストです
+                    サンプルテキストですサンプルテキストですサンプルテキストです</p>
+            </div>
+            <div class="triple">
+                <h2>サンプルタイトル</h2>
+                <img class="tripleimg" src="{% static 'media/img/espocont2.png' %}" alt="">
+                <p>サンプルテキストです。サンプルテキストです。サンプルテキストですサンプルテキストです
+                    サンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストです </p>
+            </div>
+            <div class="triple">
+                <h2>サンプルタイトル</h2>
+                <img class="tripleimg" src="{% static 'media/img/espocont3.jpeg' %}" alt="">
+                <p>サンプルテキストです。サンプルテキストです。サンプルテキストですサンプルテキストですサンプルテキストです
+                    サンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストですサンプルテキストです </p>
+            </div>
+        </div>
+
+        <div class="partner">
+            <h2 class="rh2">PARTNER</h2>
+            <div class="second">
+                <img class="doubleimg" src="{% static 'media/img/double.png'%}" alt="">
+                <div class="partnertext">
+                    <h2>サンプルタイトル</h2>
+                    <p>サンプルテキストです。サンプルテキストです。
+                        サンプルテキストでサンプルテキストです。サンプルテキストです。サンプルテキストですサ
+                        サンプルテキストです。サンプルテキストです。
+                        サンプルテキストでサンプルテキストです。サンプルテキストです。サンプルテキストですササンプルテキストです。サンプルテキストです。
+                        サンプルテキストでサンプルテキストです。サンプルテキストです。サンプルテキストですササンプルテキストです。サンプルテキストです。
+                        サンプルテキストでサンプルテキストです。サンプルテキストです。サンプルテキストですサ </p>
+                </div>
+            </div>
+
+            <div class="second">
+                <div class="partnertext">
+                    <h2>サンプルタイトル</h2>
+                    <p>サンプルテキストです。サンプルテキストです。
+                        サンプルテキストでサンプルテキストです。サンプルテキストです。サンプルテキストですサ
+                        サンプルテキストです。サンプルテキストです。
+                        サンプルテキストでサンプルテキストです。サンプルテキストです。サンプルテキストですササンプルテキストです。サンプルテキストです。
+                        サンプルテキストでサンプルテキストです。サンプルテキストです。サンプルテキストですササンプルテキストです。サンプルテキストです。
+                        サンプルテキストでサンプルテキストです。サンプルテキストです。サンプルテキストですサ </p>
+
+                </div>
+                <img class="doubleimg" src="{% static 'media/img/espodouble.png'%}" alt="">
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>COPYRIGHT © 2021 YuKi's. All RIGHTS RESERVED.</p>
+    </footer>
+</body>
+
+</html>

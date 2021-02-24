@@ -1,0 +1,99 @@
+/* *{
+    border: solid 1px black;
+} */
+
+p,  h1 {
+    color: #707070;
+}
+
+/* header 関連 */
+.bigBG{
+    top: 0;
+    background-image: url("/sta/media/img/espo.png");
+    opacity: 1.5;
+    height: 50vh;
+    background-size: cover;
+}
+header ul{
+    list-style: none; 
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 10%;
+    background-color:rgba(150, 150, 150, 0.555);
+    height: 80px;
+    margin-top: 0;
+    padding-left: 16%;
+}
+ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.headerfont{
+    padding-top: 7px;
+}
+
+.logo{
+    width: 90px;
+}
+main{
+    padding-right: 200px;
+    padding-left: 200px;
+}
+
+/* triple contents */
+.news{
+    text-align: center;
+
+    padding: 50px;
+}
+.container{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(360px,1fr));
+    padding-bottom: 50px;
+
+}
+.triple h2{
+    text-align: center;
+}
+
+.triple{
+padding-left: 50px;
+}
+.tripleimg{
+    max-width: 480px;
+    width: 100%;
+    max-height: 250px;
+}
+/* .partner{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(500px,1fr));
+} */
+.rh2{
+    text-align: center;
+}
+.second{
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.doubleimg{
+max-width: 48%;
+}
+.second p{
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 5%;
+}
+.partnertext h2{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/* footer */
+footer{
+    background-color: #E8E4E4;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

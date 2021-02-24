@@ -17,7 +17,7 @@ def signupfunc(request):
         password = request.POST["password"]
         try:
             user = User.objects.create_user(username,"",password)
-            return render(request,"signup.html",{})
+            return redirect("login")
         except:
             return render(request,"signup.html",{"error":"このユーザーは登録されています。"})
     return render(request, "signup.html",{})

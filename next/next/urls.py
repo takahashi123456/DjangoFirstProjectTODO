@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path , include
-
+from .views import viewfunc , topfunc
+from . import settings
+from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('espo/', viewfunc,name="index"),
+    path('index/',topfunc,name="TOP"),
     path("", include("todo.urls"))
 ]
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
