@@ -1,0 +1,246 @@
+p,h1,h2,h3,a{
+    color: #3B4043;
+}
+body{
+    background-color: #ececec;
+}
+
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 2rem;
+}
+p{
+    font-size: 1rem;
+}
+a{
+    text-decoration: none;
+}
+/* header */
+header{
+    width: 100%;
+    position: fixed;
+    background-color: rgba(212, 212, 212, 0.308);
+}
+
+/* 半々の画面 */
+.firstview{
+    display: flex;
+
+}
+.bigimg{
+    width: 50%;
+}
+.bigfont{
+    margin:auto;
+    text-align: center;
+}
+.bigfont h1{
+    /* display: inline-block; */
+    margin-bottom: 20%;
+}
+.btn1{
+
+    position: relative;
+    display: inline-block;
+    padding: .8em 0.5em;
+    background-color: #7FB5FF;
+    transition: 1.0s;
+    color: #fff;
+    border-radius: 5px;
+}
+.btn1 > span{
+    border-bottom: solid 1px #FFF;
+    border-top: solid 1px #FFF;
+    padding: 0.2em 0;
+    transition: .4s;
+}
+.btn1:hover span{
+    padding: .5em 0;
+    
+}
+
+/* portfolio 部分 */
+.portfolio{
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 75px;
+}
+.port-h2{
+    text-align: center;
+}
+/* .port-content{
+    
+} */
+.port-cont{
+    margin-top: 75px;
+    display: flex;
+}
+.port-img{
+    width:50%;
+    object-fit: contain;
+}
+
+.port-text {
+    margin-left: 3%;
+}
+
+.port-text p{ 
+    margin-top: 50px;
+    
+}
+.port-btn{ 
+    margin-top: 70px;
+    text-align: center;
+}
+.btnview{
+    margin-right: 50px;
+}
+/* prifile 部分*/
+.profile{
+    margin-top: 75px;
+}
+
+.pro-cont{
+    display: flex;
+    margin-top: 50px;
+}
+.pro-text{
+    margin-left: 3%;
+}
+
+/* skills */
+.skills{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(330px,1fr));
+    text-align: center;
+}
+.ski-img{
+    margin: auto;
+    margin-top: 50px;
+}
+.ski-cont p{
+    margin-top: 50px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+footer{
+    margin-top: 75px;
+    text-align: center;
+    background-color: #DEDEDE;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* スマートフォン */
+@media(max-width:900px){
+
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.6rem;
+}
+h3{
+    font-size: 1.4rem;
+}
+p{
+    font-size: 1rem;
+}
+    header{
+        display: none;
+    }
+    /*  */
+    
+.firstview{
+    display: block;
+
+}
+.bigimg{
+    width: 100%;
+}
+.bigfont{
+    position: absolute;
+    top: 20%;
+    left: 16%;
+    margin:auto;
+    text-align: center;
+}
+.bigfont h1{
+    color: #fff;
+}
+
+/* portfolio 部分 */
+.portfolio{
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 75px;
+}
+
+.port-cont{
+    margin-top: 75px;
+    display: block;
+}
+.port-img{
+    width:100%;
+    object-fit: contain;
+}
+
+.port-text h2{
+    margin-top: 50px;
+    text-align: center;
+}
+/* profile */
+
+.profile{
+    margin-top: 75px;
+}
+
+.pro-cont{
+    display: block;
+    margin-top: 50px;
+}
+.pro-text{
+    margin-top: 50px;
+    margin-left: 0%;
+}
+/* skills */
+.skillsh3{
+    text-align: center;
+}
+.ski-img{
+    margin: auto;
+    margin-top: 50px;
+}
+.ski-cont p{
+    margin-top: 50px;
+    margin-right: 0%;
+    margin-left: 0%;
+}
+
+@media(max-width:400px){
+    .port-btn{ 
+        display: flex;
+        margin-top: 70px;
+        text-align: center;
+    }
+}
+}
+/* tablet */
+@media(min-width:600px){
+    .bigfont{
+        
+        top: 33%;
+        left: 30%;
+    }
+    .bigfont h1{
+    font-size: 2.5rem;
+    }
+}

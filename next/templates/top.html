@@ -1,65 +1,69 @@
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YuKi's Portfoli</title>
+    <link rel="stylesheet" href="{% static 'resetstyle.css' %}">
+    <link rel="stylesheet" href="{% static 'styleindex.css' %}">
 </head>
 
 <body>
     <header>
-        <a href="#TOP"><img src="" alt="LOGO"> </a>
+        <a href="#TOP"><img src="{% static 'media/top/logos.svg' %}" alt="LOGO"> </a>
     </header>
     <main>
         <div class="firstview">
             <div class="bigimg">
-                <img src="#" alt="左一面（モバイル版では全画面）">
+                <img src="{% static 'media/top/Video.png' %}" alt="左一面（モバイル版では全画面）">
             </div>
             <div class="bigfont">
-                <h1>YuKi's Portfolio</h1>
-                <a href="#">詳しく見るボタン</a>
+                <h1>　YuKi's Portfolio</h1>
+                <a class="btn1" href="#port"><span>　　View　　</span></a>
             </div>
         </div>
-        <div class="portfolio">
-            <h2>制作作品サンプル</h2>
+        <div class="portfolio" id="port">
+            <h2 class="port-h2">制作作品サンプル</h2>
             <div class="port-content">
                 <div class="port-cont">
-                    <img class="port-img" src="" alt="">
+                    <img class="port-img" src="{% static 'media/top/takamatsu.png' %}" alt="高松城の作品例">
                     <div class="port-text">
                         <h2>高松城</h2>
-                        <p>とあるお城を自分でリニューアルすると仮定し、２通りのデザインを考え作成してみました。(レスポンシブ対応)</p>
-                        <div class="port-button">
-                            <a href="#">Views</a>
-                            <a href="#">Views</a>
+                        <p>とあるお城を自分でリニューアルすると仮定し、２通りのデザインを考え作成してみました。(レスポンシブ対応)
+                            <br>※ネット環境に繋がれていない場合正しく表示されません。
+                        </p>
+                        <div class="port-btn">
+                            <a href="http://oyabin.html.xdomain.jp/" class="btn1 btnview"><span>　　View1　　</span></a>
+                            <a href="http://middle.html.xdomain.jp/" class="btn1"><span>　　View2　　</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="port-cont">
-                    <img class="port-img" src="" alt="">
+                    <img class="port-img" src="{% static 'media/top/todo.png' %}" alt="TODOリストの作品例">
                     <div class="port-text">
                         <h2>TODOLIST</h2>
                         <p>Djangoを使いサンプル作品として、
                             制作しました。
                             ログイン機能や投稿機能など実装しています。
-                            実装の仕方などを確認できました。（レスポンシブ半分対応)</p>
-                        <div class="port-button">
-                            <a href="#">Views</a>
+                            実装の仕方などを確認できました。（レスポンシブ半分対応)
+                            ユーザを適当に作成してログインしてみてください
+                        </p>
+                        <div class="port-btn">
+                            <a href="{% url 'login' %}" class="btn1"><span>　　View　　</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="port-cont">
-                    <img class="port-img" src="" alt="">
+                    <img class="port-img" src="{% static 'media/top/espo.png' %}" alt="ESPORTSの画像">
                     <div class="port-text">
                         <h2>ESPORTS SITE</h2>
                         <p>仮想のチームをイメージし、
                             サンプル作品として、制作しました。
                         </p>
-                        <div class="port-button">
-                            <a href="#">Views</a>
-                            <a href="#">Views</a>
+                        <div class="port-btn">
+                            <a href="{% url 'espo' %}" class="btn1"><span>　　View　　</span></a>
                         </div>
                     </div>
                 </div>
@@ -67,10 +71,10 @@
         </div>
 
         <div class="profile">
-            <h2>My Profile</h2>
-            <div class="pro-content">
+            <h2 class="port-h2">My Profile</h2>
+            <div class="pro-content portfolio">
                 <div class="pro-cont">
-                    <img class="pro-img" src="#" alt="">
+                    <img class="pro-img" src="{% static 'media/top/rits.png' %}" alt="立命館大学">
                     <div class="pro-text">
                         <h3>立命館大学入学</h3>
                         <p>立命館大学経済学部に入学。
@@ -80,7 +84,7 @@
                     </div>
                 </div>
                 <div class="pro-cont">
-                    <img class="pro-img" src="#" alt="">
+                    <img class="pro-img" src="{% static 'media/top/mens.png' %}" alt="mensの画像">
                     <div class="pro-text">
                         <h3>新卒後地方銀行入社</h3>
                         <p>立命館大学経済学部に入学。
@@ -91,7 +95,7 @@
                     </div>
                 </div>
                 <div class="pro-cont">
-                    <img class="pro-img" src="#" alt="">
+                    <img class="pro-img" src="{% static 'media/top/neets.png' %}" alt="neetの画像">
                     <div class="pro-text">
                         <h3>1年の放浪</h3>
                         <p>改めて自分が何をしたいのかを考えるためにも、コロナ禍という制限はあったが、プログラミングから全国旅行まで、様々なことにチャレンジしてきました。
@@ -103,11 +107,11 @@
         </div>
 
         <div class="skill">
-            <h2>SKILL</h2>
-            <div class="skills">
+            <h2 class="port-h2">SKILL</h2>
+            <div class="skills portfolio">
                 <div class="ski-cont">
-                    <h3>Python</h3>
-                    <img src="#" alt="">
+                    <h3 class="skillsh3">Python</h3>
+                    <img class="ski-img" src="{% static 'media/top/python.png' %}" alt="pythonLOGO">
                     <p>最初に始めた言語です。
                         WEB開発から機械学習など様々な分野で使うことができるので最初にやるにはいいと思い学習開始。
                         現在はDjangoを使っています。
@@ -115,14 +119,14 @@
                     </p>
                 </div>
                 <div class="ski-cont">
-                    <h3>Javascripts</h3>
-                    <img src="#" alt="">
+                    <h3 class="skillsh3">Javascripts</h3>
+                    <img class="ski-img" src="{% static 'media/top/javascript.png' %}" alt="JavascriptsLOGO">
                     <p>WEB系企業に就職する上で欠かせない言語と聞き、学習開始。まだ、一からプラグインを書くのは難しいですが、queryなどをアレンジするなら可能。
                     </p>
                 </div>
                 <div class="ski-cont">
-                    <h3>Html&Css</h3>
-                    <img src="#" alt="">
+                    <h3 class="skillsh3">Html&Css</h3>
+                    <img class="ski-img" src="{% static 'media/top/css.png' %}" alt="HTMLLOGO">
                     <p>正確にはマークアップ言語ですが。基本となるHTML＆CSSはかけます
                         Djangoで使うために、このサイトはjinja2という形式で使っています。
                     </p>
@@ -130,7 +134,7 @@
             </div>
         </div>
     </main>
-    <footer>COPYRIGHT © 2021 YUKi’s. All RIGHTS RESERVED.</footer>
+    <footer>COPYRIGHT © 2021 YuKi’s. All RIGHTS RESERVED.</footer>
 </body>
 
 </html>

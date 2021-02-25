@@ -20,7 +20,7 @@ from . import settings
 from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('espo/', viewfunc,name="index"),
+    path('espo/', viewfunc,name="espo"),
     path('index/',topfunc,name="TOP"),
     path("", include("todo.urls"))
 ]

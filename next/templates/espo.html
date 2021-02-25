@@ -1,19 +1,19 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'resetstyle.css' %}">
-    <link rel="stylesheet" href="{% static 'styleTOP.css' %}">
+    <link rel="stylesheet" href="{% static 'styleespo.css' %}">
 </head>
 
 <body>
     <header class="bigBG">
         <ul>
-            <li><a href="#" class="headerfont"> TOP</a></li>
+            <li><a href="{% url 'TOP' %}" class="headerfont"> TOP</a></li>
             <li><a href="#" class="headerfont"> ABOUT</a></li>
             <li><a href="#" class="headerfont">NEWS</a></li>
             <li><a href="#"><img class="logo" src="{% static 'media/img/logo2.png' %}" alt=""></a></li>
